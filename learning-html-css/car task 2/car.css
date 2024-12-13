@@ -1,0 +1,141 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.main{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.mountain{
+    height: 70%;
+    width: 100%;
+    background-image: url(/mountain.png);
+    background-position: center;
+    background-size:cover ;
+}
+.road{
+    height: 900px;
+    width: 150%;
+    position: relative;
+    top: -12%;
+    left: -25%;
+    background-color: black;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: perspective(400px)rotateX(10deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.roadmark{
+    height: 100px;
+    width: 500px;
+    transform: translate(-50% -50%);
+    background-color: #fff;
+    animation: road-moving 1s infinite linear;
+}
+.car{
+ 
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 20%;
+    img{
+        height: 800px;
+        width: 1200px;
+    }
+    .tire{
+        height: 270px;
+        width: 270px;
+        border-radius: 50%;
+        background:radial-gradient(silver 0% 30%,black 30% 100%);
+        animation: tire-rotate 3s infinite linear;
+    }
+    .weel1{
+        position: absolute;
+        top: 57%;
+        left: 13%;
+    }
+    .weel2{
+        position: absolute;
+        top: 57%;
+        left: 70%;
+    }
+}
+.streetlight{
+    height: 600px;
+    width: 50px;
+    background-color: #A1662F;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    z-index: 1;
+    right: 90%;
+    top: 44%;
+    animation:streetlight-moving 5s infinite linear;
+   
+    
+    .lightbar{
+        height: 50px;
+        width: 200px;
+        background-color: #A1662F;
+        border-radius: 30px ;
+        position: absolute;
+        top: 10%;
+        transform-style: preserve-3d;
+        transform: perspective(400px)rotatez(-10deg);
+    }
+    .light{
+        height: 50px;
+        width: 100px;
+        position: absolute;
+        left: 70%;
+        bottom: -100%;
+        border-radius: 50% 50% 5px 5px;
+        background-color: rgb(248, 236, 0);
+        box-shadow: 0px 50px 20px rgb(248, 236, 0);
+        transform-style: preserve-3d;
+        transform: perspective(400px)rotatez(10deg);
+        animation: streetlight-glow 1s infinite linear;
+    }
+}
+@keyframes streetlight-moving{
+    0%{
+        right:10%;
+    }
+    100%{
+        right: 100%;
+    }
+  
+}
+@keyframes streetlight-glow{
+    0%{
+        box-shadow:0px 0px 10px rgb(255, 242, 0);
+    
+    }
+    100%{
+        box-shadow:0px 40px 100px rgb(248, 232, 0);
+
+    }
+}
+@keyframes road-moving{
+    from{
+        transform: translateX(50%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes tire-rotate {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+    
+}
