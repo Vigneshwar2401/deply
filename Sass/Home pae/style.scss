@@ -1,0 +1,43 @@
+@import "./box";
+@import "./variable";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box1{
+    @include boxstyle(200px, 200px, blue,10px);
+}
+.box2{
+    @include boxstyle(100px, 200px,red,30px);
+}
+.box3{
+    @include boxstyle(100px, 100px, green,50px);
+}
+.box4{
+    @include boxstyle(100px, 200px, lightblue,20px);
+}
+.box5{
+    @include boxstyle(150px, 200px, gray,10px);
+}
+.box6{
+    @include boxstyle(200px, 300px, brown,10px);
+}
+.box7{
+    @include boxstyle(100px, 200px,yellow,20px);
+}
+.box8{
+    @include boxstyle(300px, 200px, orange,10px);
+}
+.box9{
+    @include boxstyle(200px,250px, navy,10px);
+}
+.box10{
+    @include boxstyle(350px, 200px, gold,10px);
+}

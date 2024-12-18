@@ -1,0 +1,6 @@
+@mixin boxstyle($height,$width,$bg-color,$b-radius){
+    height: $height;
+    width: $width;
+    background-color: $bg-color;
+    border-radius: $b-radius;
+}
