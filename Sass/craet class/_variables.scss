@@ -1,0 +1,7 @@
+@mixin createbox($box-size,$bgc){
+    .box-#{$box-size}{
+        height: #{$box-size}+px;
+        width: #{$box-size*2}+px;
+        background-color: $bgc;
+    }
+}

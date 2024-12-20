@@ -1,0 +1,21 @@
+@import "./variables";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@include createbox(10,red);
+@include createbox(20,green);
+@include createbox(30,blue);
+@include createbox(40,yellow);
+@include createbox(50,violet);
+@include createbox(60,gray);
+@include createbox(70,lightgreen);
+@include createbox(80,orange);
+@include createbox(90,black);
+@include createbox(100,gold);
+
+
+
+
