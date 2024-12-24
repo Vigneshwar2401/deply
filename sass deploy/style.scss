@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+@for $i from 1 to 256{
+    .box-#{$i}{
+        height: $i+10px;
+        width: $i+10px;
+    }
+    .bg-#{$i}{
+        background-color: rgb($i,0, 0);
+    }
+    .p-#{$i}{
+        padding: $i+ px;
+    }
+    .m-#{$i}{
+        margin: $i+ px;
+    }
+    .fs-#{$i}{
+        font-size: $i+ px;
+    }
+    .br-#{$i}{
+        border-radius: $i+ px;
+    }
+    .col-#{$i}{
+        color:rgb($i,$i, $i);
+    }
+    
+}
+.flex{
+    display: flex;
+}
+.just{
+    justify-content: center;
+}
+.ali{
+    align-items: center;
+}
+.main{
+    flex-wrap: wrap;
+}
